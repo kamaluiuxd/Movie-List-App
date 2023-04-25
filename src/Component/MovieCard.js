@@ -9,7 +9,7 @@ const MovieCard = ({ movie }) => {
 	};
 
 	return (
-		<div className="mx-8 cursor-pointer" onClick={onMovieClick}>
+		<div className="mx-6 cursor-pointer" onClick={onMovieClick}>
 			<div>
 				<img
 					src={movie.Poster}
