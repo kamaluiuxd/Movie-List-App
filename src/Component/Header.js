@@ -13,7 +13,8 @@ const Header = () => {
 				</Link>
 				<input
 					value={search}
-					className="h-10 md:w-80 px-3 hover:border-none text-black"
+					placeholder="Search"
+					className="h-10 md:w-80 w-64 border-0  px-3 hover:border-none text-black   outline-none"
 					type="search"
 					onChange={(e) => setSearch(e.target.value)}
 				/>
