@@ -1,5 +1,4 @@
 import { useMovie } from "../Store/MovieContext";
-import emptyImg from "../assets/logok.png";
 
 const MovieCard = ({ movie }) => {
 	const { setGetId } = useMovie();
@@ -9,7 +8,7 @@ const MovieCard = ({ movie }) => {
 	};
 
 	return (
-		<div className="mx-6 cursor-pointer" onClick={onMovieClick}>
+		<div className="mx-6 md:mx-1 cursor-pointer" onClick={onMovieClick}>
 			<div>
 				<img
 					src={movie.Poster}
