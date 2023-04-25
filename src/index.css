@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100%;
+	position: relative;
+	margin: 0;
+	padding-bottom: 6rem;
+	box-sizing: inherit;
+	background-color: #020c1b;
+	color: aliceblue;
+}

@@ -24,7 +24,7 @@
 
 - [React Icons](https://react-icons.github.io/react-icons/)
 
-- [Font Link](https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap)
+- [Josefin](https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap)
 
 ### Libraries used
 
