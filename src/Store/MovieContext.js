@@ -1,39 +1,33 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
-import SingleMovie from "../Component/SingleMovie";
+
 import { searchMovie } from "../Config/api";
 
 const Movie = createContext();
 
 const MovieContext = ({ children }) => {
 	const [search, setSearch] = useState("");
-
 	const [movieList, setMovieList] = useState([]);
-	const [movieId, setMovieId] = useState("");
-	const [getId, setGetId] = useState("");
+	const [movie, setMovie] = useState();
 
 	const fetchMovie = async () => {
-		const { data } = await axios.get(searchMovie(search));
-		setMovieList(data.Search);
-	};
-	const fetchSingleMovie = async () => {
-		const { data } = await axios.get(SingleMovie(getId));
-		setMovieId(data);
-		console.log(data);
+		try {
+			const { data } = await axios.get(searchMovie(search));
+			setMovieList(data.Search);
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	useEffect(() => {
-		fetchSingleMovie();
-	}, []);
-
-	useEffect(() => {
-		fetchMovie();
+		const timerOut = setTimeout(() => {
+			fetchMovie();
+		}, 500);
+		return () => clearTimeout(timerOut);
 	}, [search]);
 
-	console.log(movieId);
-
-	return <Movie.Provider value={{ search, setSearch, movieList, setGetId }}>{children}</Movie.Provider>;
+	return <Movie.Provider value={{ search, setSearch, movieList, movie, setMovie }}>{children}</Movie.Provider>;
 };
 export default MovieContext;
 
