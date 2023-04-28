@@ -1,6 +1,8 @@
 import { LinearProgress } from "@mui/material";
 
-const SingleMovieTemplate = ({ movie: { Poster, imdbRating, Year, Title, Plot, Runtime, Actors, Genre } }) => {
+const SingleMovieTemplate = ({
+	movie: { Poster, imdbRating, Year, Title, Plot, Runtime, Actors, Genre, Language },
+}) => {
 	return (
 		<section className="container mx-auto">
 			<div className="grid md:grid-cols-12 m-8">
@@ -9,6 +11,7 @@ const SingleMovieTemplate = ({ movie: { Poster, imdbRating, Year, Title, Plot, R
 				</div>
 				<div className="md:col-span-9">
 					<h1>{Title}</h1>
+					<h1>{Language}</h1>
 					<h2>{Year}</h2>
 
 					<p>{Runtime}</p>

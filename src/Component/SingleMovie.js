@@ -2,6 +2,7 @@
 import { CircularProgress } from "@mui/material";
 import axios from "axios";
 import { useEffect } from "react";
+import { ImSpinner10 } from "react-icons/im";
 import { useParams } from "react-router-dom";
 import { movieDetails } from "../Config/api";
 import { useMovie } from "../Store/MovieContext";
@@ -28,7 +29,7 @@ const SingleMovie = () => {
 	if (!movie)
 		return (
 			<div className="flex justify-center items-center h-[400px]">
-				<CircularProgress />
+				<ImSpinner10 className="animate-spin via-violet-500" size={50} />
 			</div>
 		);
 	if (undefined != movie) {
