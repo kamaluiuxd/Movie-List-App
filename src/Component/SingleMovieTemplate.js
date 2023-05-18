@@ -5,11 +5,11 @@ const SingleMovieTemplate = ({
 }) => {
 	return (
 		<section className="container mx-auto">
-			<div className="grid md:grid-cols-12 m-8">
+			<div className="grid md:grid-cols-12 m-8 md:space-x-8">
 				<div className="md:col-span-3 ">
 					<img src={Poster} alt="" className=" w-screen object-cover object-center rounded-t" />
 				</div>
-				<div className="md:col-span-9">
+				<div className="md:col-span-9 md:mt-0 mt-6">
 					<h1>{Title}</h1>
 					<h1>{Language}</h1>
 					<h2>{Year}</h2>

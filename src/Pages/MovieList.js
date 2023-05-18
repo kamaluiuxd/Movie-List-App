@@ -16,7 +16,7 @@ const MovieList = () => {
 				<input
 					value={search}
 					placeholder="Search"
-					className="h-10 md:w-80 w-80 border-0  px-3 hover:border-none text-black   outline-none"
+					className="h-10 md:w-80 w-80 border-0  px-3 hover:border-none text-black outline-none"
 					type="search"
 					onChange={handleSearch}
 				/>
